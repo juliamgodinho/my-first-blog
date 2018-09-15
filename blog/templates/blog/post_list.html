@@ -17,6 +17,15 @@
 			<p><b>From the <a href="https://tutorial.djangogirls.org/">Django Girls Tutorial</a></b></p>
 			<ul><li>Introduction</li><li>Installation</li><li>How the internet works</li><li>Command line</li><li>Introduction to Python</li><li>Django</li><li>HTML</li><li>CSS</li></ul>
 		</div>
+		<div>
+			<h2>My Posts</h2>
+		</div>
+		{% for post in posts %}
+			<div>
+				<h1><a href="">{{ post.title }}</a></h1>
+				<p>{{ post.text|linebreaksbr }}</p>
+			</div>
+		{% endfor %}
 
 	</body>
 </html>
